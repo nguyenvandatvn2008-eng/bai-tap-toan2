@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main ()
+{
+    float diem;
+    printf("Moi nhap diem cua ban:");
+    scanf("%f",&diem);
+    if(diem>10 || diem<0)
+        printf("Diem khong hop le!");
+    else if (diem >= 9)
+        printf ("xuat sac");
+    else if (diem >= 8)
+        printf("gioi");
+    else if (diem >= 6.5)
+        printf("kha");
+    else if (diem >= 5)
+        printf("trung binh");
+    else if (diem >= 3.5)
+        printf("yeu");
+    else printf("kem");
+    return 0;
+}
