@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập toán</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #eaf2ff;
+            padding-top: 80px;
+        }
+
+        .hop {
+            background: white;
+            width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #ketqua {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hop">
+        <h2>Bài tập toán</h2>
+        <h3>1 + 5 = ?</h3>
+
+        <input type="number" id="dapan"
+               placeholder="Nhập đáp án">
+
+        <br>
+
+        <button onclick="kiemtra()">Kiểm tra</button>
+
+        <p id="ketqua"></p>
+    </div>
+
+    <script>
+        function kiemtra() {
+            let dapan = document.getElementById("dapan").value;
+            let ketqua = document.getElementById("ketqua");
+
+            if (dapan === "") {
+                ketqua.innerHTML = "Bạn chưa nhập đáp án!";
+            } else if (Number(dapan) === 6) {
+                ketqua.innerHTML = "Bạn trả lời đúng!";
+            } else {
+                ketqua.innerHTML = "Bạn đã nhập sai!";
+            }
+        }
+    </script>
+</body>
+</html>
